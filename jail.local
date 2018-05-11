@@ -64,3 +64,9 @@ logpath = /var/lib/docker/volumes/mail_rainloop-data/_data/_data_/_default_/logs
 action    = docker-iptables-multiport[name=NoAuthFailures, port="http,https"]
 maxretry = 5
 
+[guacamole]
+
+enabled   = true
+filter    = guacamole
+logpath   = /var/lib/docker/containers/*/*-json.log
+action    = docker-iptables-multiport[name=guacamole, port="http,https"]
