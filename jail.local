@@ -55,3 +55,12 @@ filter    = apache-auth
 logpath   = /var/log/apache*/*error.log
 action    = docker-iptables-multiport[name=NoAuthFailures, port="http,https"]
 maxretry  = 6
+
+[rainloop]
+
+enabled = true
+filter = rainloop
+logpath = /var/lib/docker/volumes/mail_rainloop-data/_data/_data_/_default_/logs/fail2ban/auth-*.txt
+action    = docker-iptables-multiport[name=NoAuthFailures, port="http,https"]
+maxretry = 5
+
