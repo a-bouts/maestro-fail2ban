@@ -70,3 +70,4 @@ enabled   = true
 filter    = guacamole
 logpath   = /var/lib/docker/containers/*/*-json.log
 action    = docker-iptables-multiport[name=guacamole, port="http,https"]
+logtimezone = UTC
