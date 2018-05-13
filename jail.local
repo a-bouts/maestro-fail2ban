@@ -69,5 +69,5 @@ maxretry = 5
 enabled   = true
 filter    = guacamole
 logpath   = /var/lib/docker/containers/*/*-json.log
-action    = docker-iptables-multiport[name=guacamole, port="http,https"]
+action    = docker-action
 logtimezone = UTC
